@@ -1,0 +1,16 @@
+{% extends "realestate/base_estate.html" %}
+
+{% load jformat %}
+
+{% block title %}
+جزییات {{ estate }}
+{% endblock title %}
+
+{% block content %}
+
+<p><a href="{% url 'realestate_home' %}">بازگشت به لیست تمام خانه ها</a></p>
+<p>{{ estate }}</p>
+<p>{{ estate.year_created|jformat:"%Y" }}</p>
+
+
+{% endblock content %}

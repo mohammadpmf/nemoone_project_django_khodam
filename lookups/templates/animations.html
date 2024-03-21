@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for animation in animations %}
+        <h1>{{ animation.name }}</h1>
+        <p>{{ animation.director }}</p>
+        <p>{{ animation.company }}</p>
+        <p>{{ animation.price }}</p>
+        <p>{{ animation.pga }}</p>
+        <hr>
+    {% endfor %}
+</body>
+</html>

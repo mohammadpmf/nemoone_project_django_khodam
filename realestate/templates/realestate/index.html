@@ -1,0 +1,21 @@
+{% extends "realestate/base_estate.html" %}
+
+{% load jformat %}
+
+{% load mohammadpmf %}
+
+{% block title %}
+لیست تمامی منزل های ثبت شده
+{% endblock title %}
+
+{% block content %}
+
+{% for estate in estates %}
+    <p>{{ estate }}</p>
+    <p>{{ estate.year_created|jformat:"%Y" }}</p>
+    <p><a href="{% url 'realestate_detail' estate.pk estate.slug %}">نمایش جزییات</a></p>
+    <p>{{ estate.datetime_created|jformat:"%A %d %B %Y %H:%M"|e2p }}</p>
+    <hr style="width: 20%; margin-right: 80%;">
+{% endfor %}
+
+{% endblock content %}
